@@ -30,52 +30,56 @@ function withSuspense(Component: ComponentType): ReactElement {
 }
 
 export const router = createBrowserRouter(
-  {
-    path: "/",
-    element: <MainLayout />,
-    // errorElement: withSuspense(RouteErrorPage),
-    children: [
-      { index: true, element: withSuspense(HomePage) },
-      { path: "search", element: withSuspense(SearchPage) },
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      // errorElement: withSuspense(RouteErrorPage),
+      children: [
+        { index: true, element: withSuspense(HomePage) },
+        { path: "search", element: withSuspense(SearchPage) },
 
-      { path: "destinations", element: withSuspense(DestinationsPage) },
+        { path: "destinations", element: withSuspense(DestinationsPage) },
 
-      {
-        path: "destinations/:id",
-        element: withSuspense(DestinationDetailPage),
-      },
+        {
+          path: "destinations/:id",
+          element: withSuspense(DestinationDetailPage),
+        },
 
-      {
-        path: "favorites",
-        element: <ProtectedRoute>{withSuspense(FavoritesPage)}</ProtectedRoute>,
-      },
-      {
-        path: "profile",
-        element: <ProtectedRoute>{withSuspense(ProfilePage)}</ProtectedRoute>,
-      },
-      { path: "login", element: withSuspense(LoginPage) },
-      { path: "register", element: withSuspense(RegisterPage) },
-      {
-        path: "properties/:id",
-        element: withSuspense(PropertyDetailPage),
-        loader: propertyDetailLoader,
-        errorElement: withSuspense(RouteErrorPage),
-      },
-      {
-        path: "booking",
-        element: <BookingLayout />,
-        children: [
-          {
-            path: ":id",
-            element: (
-              <ProtectedRoute>{withSuspense(BookingPage)}</ProtectedRoute>
-            ),
-          },
-        ],
-      },
-      { path: "*", element: withSuspense(NotFoundPage) },
-    ],
-  },
+        {
+          path: "favorites",
+          element: (
+            <ProtectedRoute>{withSuspense(FavoritesPage)}</ProtectedRoute>
+          ),
+        },
+        {
+          path: "profile",
+          element: <ProtectedRoute>{withSuspense(ProfilePage)}</ProtectedRoute>,
+        },
+        { path: "login", element: withSuspense(LoginPage) },
+        { path: "register", element: withSuspense(RegisterPage) },
+        {
+          path: "properties/:id",
+          element: withSuspense(PropertyDetailPage),
+          loader: propertyDetailLoader,
+          errorElement: withSuspense(RouteErrorPage),
+        },
+        {
+          path: "booking",
+          element: <BookingLayout />,
+          children: [
+            {
+              path: ":id",
+              element: (
+                <ProtectedRoute>{withSuspense(BookingPage)}</ProtectedRoute>
+              ),
+            },
+          ],
+        },
+        { path: "*", element: withSuspense(NotFoundPage) },
+      ],
+    },
+  ],
   {
     basename: "/huila-go",
   }
