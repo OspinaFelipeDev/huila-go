@@ -29,7 +29,7 @@ function withSuspense(Component: ComponentType): ReactElement {
   );
 }
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
   {
     path: "/",
     element: <MainLayout />,
@@ -76,4 +76,7 @@ export const router = createBrowserRouter([
       { path: "*", element: withSuspense(NotFoundPage) },
     ],
   },
-]);
+  {
+    basename: "/huila-go",
+  }
+);
