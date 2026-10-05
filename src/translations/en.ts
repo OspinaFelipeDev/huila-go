@@ -9,7 +9,7 @@ export const en = {
   },
 
   home: {
-  eyebrow: "Educational Platzi-host clone",
+  eyebrow: "Discover Huila",
   title: "Find your next accommodation",
   description:
     "Explore apartments, houses, and cabins for your next adventure.",

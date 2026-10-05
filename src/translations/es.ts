@@ -9,7 +9,7 @@ export const es = {
   },
 
  home: {
-  eyebrow: "Clon educativo estilo Platzi-host",
+  eyebrow: "Descubre el Huila",
   title: "Encuentra tu próximo alojamiento",
   description:
     "Explora departamentos, casas y cabañas para tu próxima aventura.",
