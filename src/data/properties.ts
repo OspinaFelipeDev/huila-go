@@ -41,13 +41,13 @@ export const properties: Property[] = [
     contactEmail: "hotelcolonialandino@gmail.com",
 
     image:
-      "/public/images/properties/hotel-colonial-andin/principal.jpg",
+      "/images/properties/hotel-colonial-andin/principal.jpg",
 
     gallery: [
-      "/public/images/properties/hotel-colonial-andin/habitacion-1.jpg",
-      "/public/images/properties/hotel-colonial-andin/habitacion-2.jpg",
-      "/public/images/properties/hotel-colonial-andin/patio.jpg",
-      "/public/images/properties/hotel-colonial-andin/bano.jpg",
+      "/images/properties/hotel-colonial-andin/habitacion-1.jpg",
+      "/images/properties/hotel-colonial-andin/habitacion-2.jpg",
+      "/images/properties/hotel-colonial-andin/patio.jpg",
+      "/images/properties/hotel-colonial-andin/bano.jpg",
     ],
 
     amenities: [
