@@ -7,6 +7,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { removeFavorite } from "../../services/favorites";
 import { translatePropertyType } from "../../utils/translatePropertyType";
+import { getImageUrl } from "../../utils/imageUrl";
 
 type PropertyCardProps = {
   property: Property;
@@ -64,7 +65,7 @@ export function PropertyCard({
     >
       <div className="property-card-image">
         <img
-          src={property.image}
+          src={getImageUrl(property.image)}
           alt={property.title[language]}
         />
 

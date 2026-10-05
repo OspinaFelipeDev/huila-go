@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { useLanguage } from "../context/LanguageContext";
 import { destinations } from "../data/destinations";
+import { getImageUrl } from "../utils/imageUrl";
 
 export default function DestinationsPage() {
   const { language, t } = useLanguage();
@@ -26,7 +27,7 @@ export default function DestinationsPage() {
             >
               <div className="destination-card-image">
                 <img
-                  src={destination.image}
+                  src={getImageUrl(destination.image)}
                   alt={destination.name[language]}
                 />
               </div>

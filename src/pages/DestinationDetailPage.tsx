@@ -10,6 +10,7 @@ import {
 } from "../services/favorites";
 
 import { destinations } from "../data/destinations";
+import { getImageUrl } from "../utils/imageUrl";
 
 export default function DestinationDetailPage() {
   const { id } = useParams();
@@ -131,9 +132,9 @@ export default function DestinationDetailPage() {
       <section className="destination-detail">
         <div className="destination-detail-image">
           <img
-            src={destination.image}
-            alt={destination.name[language]}
-          />
+  src={getImageUrl(destination.image)}
+  alt={destination.name[language]}
+/>
 
           <button
             type="button"
@@ -286,12 +287,12 @@ export default function DestinationDetailPage() {
                   }
                 >
                   <img
-                    src={image}
-                    alt={`${destination.name[language]} - ${
-                      index + 1
-                    }`}
-                    loading="lazy"
-                  />
+  src={getImageUrl(image)}
+  alt={`${destination.name[language]} - ${
+    index + 1
+  }`}
+  loading="lazy"
+/>
                 </button>
               ))}
             </div>
@@ -341,13 +342,13 @@ export default function DestinationDetailPage() {
           </button>
 
           <img
-            className="destination-lightbox-image"
-            src={destination.gallery[selectedImage]}
-            alt={`${destination.name[language]} - ${
-              selectedImage + 1
-            }`}
-            onClick={(event) => event.stopPropagation()}
-          />
+  className="destination-lightbox-image"
+  src={getImageUrl(destination.gallery[selectedImage])}
+  alt={`${destination.name[language]} - ${
+    selectedImage + 1
+  }`}
+  onClick={(event) => event.stopPropagation()}
+/>
 
           <button
             type="button"

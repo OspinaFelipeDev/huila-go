@@ -5,6 +5,7 @@ import type { Property } from "../types/property";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { translatePropertyType } from "../utils/translatePropertyType";
+import { getImageUrl } from "../utils/imageUrl";
 
 import {
   addFavorite,
@@ -122,10 +123,10 @@ export default function PropertyDetailPage() {
         <div className="property-detail-image">
 
           <img
-            src={selectedImage}
-            alt={property.title[language]}
-            onClick={openLightbox}
-          />
+  src={getImageUrl(selectedImage)}
+  alt={property.title[language]}
+  onClick={openLightbox}
+/>
 
           <span>{translatedType}</span>
 
@@ -159,11 +160,11 @@ export default function PropertyDetailPage() {
                 }
               >
                 <img
-                  src={image}
-                  alt={`${property.title[language]} - ${
-                    t.property.image
-                  } ${index + 1}`}
-                />
+  src={getImageUrl(image)}
+  alt={`${property.title[language]} - ${
+    t.property.image
+  } ${index + 1}`}
+/>
               </button>
             ))}
           </div>
@@ -368,12 +369,12 @@ export default function PropertyDetailPage() {
           </button>
 
           <img
-            className="property-lightbox-image"
-            src={images[lightboxIndex]}
-            alt={`${property.title[language]} - ${
-              t.property.image
-            } ${lightboxIndex + 1}`}
-          />
+  className="property-lightbox-image"
+  src={getImageUrl(images[lightboxIndex])}
+  alt={`${property.title[language]} - ${
+    t.property.image
+  } ${lightboxIndex + 1}`}
+/>
 
           <button
             type="button"

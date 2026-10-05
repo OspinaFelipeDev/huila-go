@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { useLanguage } from "../../context/LanguageContext";
 
 import type { Destination } from "../../data/destinations";
+import { getImageUrl } from "../../utils/imageUrl";
 
 type DestinationCardProps = {
   destination: Destination;
@@ -24,7 +25,7 @@ export function DestinationCard({
     <article className="destination-card">
       <div className="destination-card-image">
         <img
-          src={destination.image}
+          src={getImageUrl(destination.image)}
           alt={destination.name[language]}
         />
 
