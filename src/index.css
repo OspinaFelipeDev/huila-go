@@ -737,6 +737,12 @@ img {
   .property-detail-content {
     padding: 1.5rem;
   }
+
+  .property-lightbox-prev,
+.property-lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
 }
 
 /* ── Login ───────────────────────────────────────── */
