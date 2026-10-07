@@ -306,7 +306,7 @@ Si deseas conocer más sobre el proyecto, colaborar o ponerte en contacto conmig
 👨‍💻 **Andrés Felipe Cubillos Ospina**
 
 🌐 **Portfolio:**
-https://ospinafelipedev.github.io/
+https://ospinafelipedev.github.io/portafolio-moderno/
 
 💻 **GitHub:**
 https://github.com/OspinaFelipeDev
